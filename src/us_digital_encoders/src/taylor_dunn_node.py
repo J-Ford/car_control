@@ -7,7 +7,7 @@ from driver import UsDigitalSei
 class Encoders(object):
 
     def __init__(self):
-        rospy.init_node('us_digital_encoders')
+        rospy.init_node('encoder_reader')
         self.max_count = 65535
         # initializations
         self.prev_data = None
