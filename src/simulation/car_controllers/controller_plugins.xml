@@ -1,0 +1,8 @@
+<library path="lib/libcar_controllers_lib">
+	<class name="car_controllers/ThrottleController"
+			type="controller_ns::ThrottleController"
+			base_class_type="controller_interface::ControllerBase" />
+	<class name="car_controllers/SteeringController"
+			type="controller_ns::SteeringController"
+			base_class_type="controller_interface::ControllerBase" />
+</library>
