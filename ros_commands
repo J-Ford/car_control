@@ -1,0 +1,47 @@
+rosnode : display node info
+rosnode list
+rosnode cleanup
+roscore : start master node
+
+rosrun : run a node
+rosrun rqt_graph rqt_graph : graph all internode comunication streams
+rosrun rqt_plot rqt_plot : plot messages on a chart
+rosrun rqt_console rqt_console : show node console output
+rosrun rqt_logger_level rqt_logger_level : logger
+
+rostopic : list all rostopic commands
+rostopic list -h : all rostopic list commands
+rostopic pub : allows you to publish a message (rostopic pub [topic] [msg_type] [args])
+
+rosservice : commands that can be used on topics
+rosservice list : list commands
+rosservice call [commands] : calls command
+rosservice type [command] | rossrv show : show all command parameters
+
+rosparam : set and examine data on the ROS parameter server
+rosparam list
+rosparam set
+rosparam get
+rosparam dump 
+rosparam load
+
+roslaunch [package] [filename.launch] : launches nodes based on a launch file
+
+roscp [package_name] [file_to_copy_path] [copy_path] : copies file from one ros package to another
+
+rosmsg : create a ros message
+rosmsg show <message type>
+rossrv show <service type>
+
+roswtf : debug tool. Shows all errors.
+
+rospack plugins --attrib=plugin controller_interface     see all controller plugins
+
+---------------------------------------------------------------------------------------------------------------------
+
+MAKE INSTRUCTIONS:
+$ cd ~/catkin_ws
+$ catkin_make
+$ . ~/catkin_ws/devel/setup.bash
+
+note: added source ./devel/setup.bash to ~/.bashrc. Runs setup.bash on terminal startup
