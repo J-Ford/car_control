@@ -1,0 +1,3 @@
+This module is run on an arduino using the Arduino IDE. It comunicates with the motor controller based on commands received in the form of ROS messages.
+
+For setup see the rosserial arduino documentation at http://wiki.ros.org/rosserial_arduino/Tutorials 
