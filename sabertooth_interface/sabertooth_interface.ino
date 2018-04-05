@@ -2,16 +2,13 @@
 #include <std_msgs/Float64.h>
 #include <std_msgs/Empty.h>
 
-
 #define MAX_EFFORT 10
 #define DRIVE_FORWARD_COMMAND 4
 #define DRIVE_BACKWARDS_COMMAND 5
 #define STEER_RIGHT_COMMAND 0 
 #define STEER_LEFT_COMMAND 1
 #define MC_ADDRESS 128
-
 #define lightPin 6
-
 
 ros::NodeHandle rosNode;
 
@@ -41,7 +38,6 @@ ros::Subscriber<std_msgs::Float64> throttleSubscriber("throttle/control_effort/d
 ros::Subscriber<std_msgs::Float64> steeringSubscriber("steering/control_effort/data", steeringMessageCb);
 ros::Subscriber<std_msgs::Empty> lightSubscriber("toggle_light", lightMessageCb );
 
-
 void setup(){
   pinMode(lightPin, OUTPUT);
   Serial1.begin(9600);
@@ -62,10 +58,3 @@ void sendMotorCommand(int effort, int command){
   Serial1.write(effort);
   Serial1.write((MC_ADDRESS + command + effort) & 0b01111111); //checksum
 }
-
-
-
-
-
-
-
