@@ -1,4 +1,5 @@
 This module uses ros_control and gazebo to run a simulation of the vehicle. 
+See Gazebo + ros_control foumentation at http://gazebosim.org/tutorials/?tut=ros_control 
 
 Commands to run the simulation:
 roslaunch car_test_gazebo car_test.launch
