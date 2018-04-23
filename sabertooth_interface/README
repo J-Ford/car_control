@@ -1,3 +1,12 @@
 This module is run on an arduino using the Arduino IDE. It comunicates with the motor controller based on commands received in the form of ROS messages.
 
-For setup see the rosserial arduino documentation at http://wiki.ros.org/rosserial_arduino/Tutorials 
+This module sets up 3 ROS subscribers on the arduino:
+- throttleSubscriber: Sets drive motor effort based on float 64 input and effort limit defined in MAX_EFFORT
+- steeringSubscriber: Sets steering motor effort based on float 64 input
+- lightSubscriber: Toggles the light when it receives an empty message
+
+For setup see the rosserial arduino documentation at http://wiki.ros.org/rosserial_arduino/Tutorials  
+
+For the Sabertooth motor controller documnetation see https://www.dimensionengineering.com/datasheets/Sabertooth2x60.pdf 
+
+Note that the code requires the serial write functionality of the Arduino Mega. An Arduino Uno will not work.
